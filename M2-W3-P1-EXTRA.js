@@ -83,7 +83,7 @@ function addToShoppingCart(item) {
 }
 console.log(
   "3,",
-  addToShoppingCart({ Name: "Item 6", Price: 22, ID: 5, Quantity: 1})
+  addToShoppingCart({ Name: "Item 6", Price: 22, ID: 5, Quantity: 1 })
 );
 
 /* EXTRA 4
@@ -92,9 +92,9 @@ console.log(
 */
 
 function maxShoppingCart(cart) {
-    const max = Math.max(...cart.map(i => i.Price));
+  const max = Math.max(...cart.map((i) => i.Price));
 
-    return cart.find(i => i.price = max);
+  return cart.find((i) => (i.price = max));
 }
 console.log("4,", maxShoppingCart(shoppingCart));
 
@@ -103,9 +103,9 @@ console.log("4,", maxShoppingCart(shoppingCart));
  In your eCommerce you have an array of objects called shoppingCart. Each one of these objects has a price, a name, an id and the quantity to be shipped.
  Create a function called "latestShoppingCart" which receives the shoppingCart array and returns the last item.
 */
- function latestShoppingCart(cart) {
-     return cart[cart.length - 1];
- }
+function latestShoppingCart(cart) {
+  return cart[cart.length - 1];
+}
 
 console.log("5,", latestShoppingCart(shoppingCart));
 
@@ -114,12 +114,27 @@ console.log("5,", latestShoppingCart(shoppingCart));
  The function loops and prints a random number between 0 and 9 until the random number is bigger than x for three times in a row.
 */
 
-/* WRITE YOUR ANSWER HERE */
-
+function loopUntil(n) {
+  let count = 0;
+  let num;
+  while (count < 3) {
+    num = Math.floor(Math.random() * 9);
+    console.log("6,", num);
+    if (num > n) {
+      count += 1;
+    } else {
+      count = 0;
+    }
+  }
+}
+console.log("6,", loopUntil(4));
 
 /* EXTRA 7
  Write a function called "average" which receives an array and returns the average numerical value. The function automatically skips non-numeric entries in the array.
 */
+
+
+
 
 /* WRITE YOUR ANSWER HERE */
 
