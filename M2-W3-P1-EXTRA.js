@@ -116,27 +116,29 @@ console.log("5,", latestShoppingCart(shoppingCart));
 
 function loopUntil(n) {
   let count = 0;
-  let num;
+  let tries = 0;
   while (count < 3) {
-    num = Math.floor(Math.random() * 9);
+    let num = Math.floor(Math.random() * 9);
     console.log("6,", num);
     if (num > n) {
       count += 1;
     } else {
       count = 0;
     }
+    tries+=1
   }
+  return tries
 }
 console.log("6,", loopUntil(4));
 
 /* EXTRA 7
  Write a function called "average" which receives an array and returns the average numerical value. The function automatically skips non-numeric entries in the array.
 */
-
-
-
-
-/* WRITE YOUR ANSWER HERE */
+let numarr = [12,20,'99',12,22,5]
+function average(arr) {
+return  eval(arr.join('+')) / arr.length ;
+}
+console.log("7,", average(numarr));
 
 /* EXTRA 8
  Write a function called "longest" to find the longest string from a given array of strings.
