@@ -144,14 +144,19 @@ console.log("7,", average(numarr));
  Write a function called "longest" to find the longest string from a given array of strings.
 */
 
-/* WRITE YOUR ANSWER HERE */
+function longest(strs) {
+return strs.find(s => s.length == Math.max(...strs.map(s => s.length)));
+
+return maxlength;
+}
+console.log('8,',longest(['Strive','School','Is','Great','Like','Seriously']))
 
 /* EXTRA 9
  Write a function to create a very simple anti spam filter for your mailbox. The function takes a string emailContent, and returns a boolean.
  The function should return true if the emailContent string does not contain the words SPAM or SCAM.
 */
 
-/* WRITE YOUR ANSWER HERE */
+
 
 /* EXTRA 10
  Write a function that receives a date as a parameter and calculates the number of days passed since the given date.
