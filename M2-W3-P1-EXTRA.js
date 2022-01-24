@@ -63,31 +63,43 @@ const shoppingCart = [
 ];
 
 function shoppingCartTotal(cart) {
-   return eval(shoppingCart.map(i => i.Price * i.Quantity).join('+'))
-//or
-//     let result = 0;
-// for (item of cart){
-// result += (item.Price * item.Quantity)
-// }
-// return result
+  return eval(shoppingCart.map((i) => i.Price * i.Quantity).join("+"));
+  //or
+  //     let result = 0;
+  // for (item of cart){
+  // result += (item.Price * item.Quantity)
+  // }
+  // return result
 }
-console.log('2,',shoppingCartTotal(shoppingCart))
+console.log("2,", shoppingCartTotal(shoppingCart));
 
 /* EXTRA 3
  In your eCommerce you have an array of objects called shoppingCart. Each one of these objects has a price, a name, an id and the quantity to be shipped.
  Create a function called "addToShoppingCart" which receives a new object, adds it to shoppingCart and returns the total number of items in the shoppingCart.
 */
-
-/* WRITE YOUR ANSWER HERE */
+function addToShoppingCart(item) {
+  shoppingCart.push(item);
+  return shoppingCart.length;
+}
+console.log(
+  "3,",
+  addToShoppingCart({ Name: "Item 6", Price: 22, ID: 5, Quantity: 1})
+);
 
 /* EXTRA 4
  In your eCommerce you have an array of objects called shoppingCart. Each one of these objects has a price, a name, an id and the quantity to be shipped.
  Create a function called "maxShoppingCart" which receives the shoppingCart array and returns the most expensive item in it.
 */
 
-/* WRITE YOUR ANSWER HERE */
+function maxShoppingCart(cart) {
+    const max = Math.max(...cart.map(i => i.Price));
+
+    return cart.find(i => i.price = max);
+}
+console.log("4,", maxShoppingCart(shoppingCart));
 
 /* EXTRA 5
+
  In your eCommerce you have an array of objects called shoppingCart. Each one of these objects has a price, a name, an id and the quantity to be shipped.
  Create a function called "latestShoppingCart" which receives the shoppingCart array and returns the last item.
 */
