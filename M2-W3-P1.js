@@ -79,14 +79,19 @@ return str.split('').reverse().join('');
 }
 console.log(`7, ${reverseString('Strive')}`)
 
-/* WRITE YOUR ANSWER HERE */
+
 
 /* EXERCISE 8
  Write a function called "upperFirst" which capitalizes the first letter of each word of a given string passed as a parameter.
 */
-
-/* WRITE YOUR ANSWER HERE */
-
+function upperFirst(Str) {
+    let result = '';
+     for (let word of Str.split(' ')){
+         result +=  word.charAt(0).toUpperCase(1) + word.slice(1) + ' ';
+     }
+     return result;
+}
+console.log('8,',upperFirst('strive school is great'));
 /* EXERCISE 9
  Write a function called "cutString" which creates a new string without the first and last character of a given string passed as a parameter.
 */
