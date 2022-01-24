@@ -103,8 +103,11 @@ console.log("4,", maxShoppingCart(shoppingCart));
  In your eCommerce you have an array of objects called shoppingCart. Each one of these objects has a price, a name, an id and the quantity to be shipped.
  Create a function called "latestShoppingCart" which receives the shoppingCart array and returns the last item.
 */
+ function latestShoppingCart(cart) {
+     return cart[cart.length - 1];
+ }
 
-/* WRITE YOUR ANSWER HERE */
+console.log("5,", latestShoppingCart(shoppingCart));
 
 /* EXTRA 6
  Create a function called "loopUntil" which receives an integer x between 0 and 9 as a parameter.
@@ -112,6 +115,7 @@ console.log("4,", maxShoppingCart(shoppingCart));
 */
 
 /* WRITE YOUR ANSWER HERE */
+
 
 /* EXTRA 7
  Write a function called "average" which receives an array and returns the average numerical value. The function automatically skips non-numeric entries in the array.
