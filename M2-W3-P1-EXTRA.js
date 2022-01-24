@@ -12,7 +12,7 @@ function giveMeRandom(n) {
   }
   return arr;
 }
-console.log('1, Sum = ',checkArray(giveMeRandom(20)));
+console.log("1, Sum = ", checkArray(giveMeRandom(20)));
 function checkArray(Arr) {
   console.log(`1, Arr = ${Arr}`);
   let result = 0;
@@ -25,13 +25,53 @@ function checkArray(Arr) {
   return result;
 }
 
-
 /* EXTRA 2
  In your eCommerce you have an array of objects called shoppingCart. Each one of these objects has a price, a name, an id and the quantity to be shipped.
  Create a function called "shoppingCartTotal" which calculates the total due to the shop.
 */
+const shoppingCart = [
+  {
+    Name: "Item 1",
+    Price: 30,
+    ID: 0,
+    Quantity: 1,
+  },
+  {
+    Name: "Item 2",
+    Price: 5,
+    ID: 1,
+    Quantity: 3,
+  },
+  {
+    Name: "Item 3",
+    Price: 55,
+    ID: 2,
+    Quantity: 1,
+  },
+  {
+    Name: "Item 4",
+    Price: 2,
+    ID: 3,
+    Quantity: 20,
+  },
+  {
+    Name: "Item 5",
+    Price: 13,
+    ID: 4,
+    Quantity: 13,
+  },
+];
 
-/* WRITE YOUR ANSWER HERE */
+function shoppingCartTotal(cart) {
+   return eval(shoppingCart.map(i => i.Price * i.Quantity).join('+'))
+//or
+//     let result = 0;
+// for (item of cart){
+// result += (item.Price * item.Quantity)
+// }
+// return result
+}
+console.log('2,',shoppingCartTotal(shoppingCart))
 
 /* EXTRA 3
  In your eCommerce you have an array of objects called shoppingCart. Each one of these objects has a price, a name, an id and the quantity to be shipped.
