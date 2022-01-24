@@ -54,8 +54,10 @@ console.log(`4, ${boundary(10)},${boundary(40)},${boundary(400)}` )
  Write a function called "strivify" which accepts a string as a parameter.
  It should add the word "Strive" in front of the given string, but if the given string already begins with "Strive", then it should just return the original string.
 */
-
-/* WRITE YOUR ANSWER HERE */
+function strivify(Str) {
+    return 'Strive ' + (Str === 'Strive' ? '' : Str);
+}
+console.log(`5, ${strivify('School')}`);
 
 /* EXERCISE 6
  Write a function called "check3and7" which accepts a positive number as a parameter and checks if it is a multiple of 3 or a multiple of 7.
