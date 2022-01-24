@@ -12,8 +12,8 @@ ASSIGNMENT RULES
  Write a function called "area" which receives 2 parameters (l1, l2) and calculates the area of the associated rectangle.
 */
 
-function GetArea(Length,Width) {
-return Length * Width;
+function GetArea(w,h) {
+return w * h;
 }
 let width = 11;
 let height = 12;

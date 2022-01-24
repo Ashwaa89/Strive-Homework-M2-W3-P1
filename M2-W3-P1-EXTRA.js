@@ -125,18 +125,18 @@ function loopUntil(n) {
     } else {
       count = 0;
     }
-    tries+=1
+    tries += 1;
   }
-  return tries
+  return tries;
 }
 console.log("6,", loopUntil(4));
 
 /* EXTRA 7
  Write a function called "average" which receives an array and returns the average numerical value. The function automatically skips non-numeric entries in the array.
 */
-let numarr = [12,20,'99',12,22,5]
+let numarr = [12, 20, "99", 12, 22, 5];
 function average(arr) {
-return  eval(arr.join('+')) / arr.length ;
+  return eval(arr.join("+")) / arr.length;
 }
 console.log("7,", average(numarr));
 
@@ -145,32 +145,41 @@ console.log("7,", average(numarr));
 */
 
 function longest(strs) {
-return strs.find(s => s.length == Math.max(...strs.map(s => s.length)));
+  return strs.find((s) => s.length == Math.max(...strs.map((s) => s.length)));
 
-return maxlength;
+  return maxlength;
 }
-console.log('8,',longest(['Strive','School','Is','Great','Like','Seriously']))
+console.log(
+  "8,",
+  longest(["Strive", "School", "Is", "Great", "Like", "Seriously"])
+);
 
 /* EXTRA 9
  Write a function to create a very simple anti spam filter for your mailbox. The function takes a string emailContent, and returns a boolean.
  The function should return true if the emailContent string does not contain the words SPAM or SCAM.
 */
 function isnotspam(emailContent) {
-    return !emailContent.toUpperCase().includes('SPAM') && !emailContent.toUpperCase().includes('SCAM')
+  return (
+    !emailContent.toUpperCase().includes("SPAM") &&
+    !emailContent.toUpperCase().includes("SCAM")
+  );
 }
-console.log('9,',isnotspam('This is a test email with spam'),isnotspam('Is ok for email fiter'))
-
+console.log(
+  "9,",
+  isnotspam("This is a test email with spam"),
+  isnotspam("Is ok for email filter")
+);
 
 /* EXTRA 10
  Write a function that receives a date as a parameter and calculates the number of days passed since the given date.
 */
 
-let sdate = new Date('11/09/2020')
+let sdate = new Date("11/09/2020");
 
 function datediff(date) {
-    return  Math.floor((new Date() -date) / (1000 * 60 * 60 * 24));
+  return Math.floor((new Date() - date) / (1000 * 60 * 60 * 24));
 }
-console.log('10,',datediff(sdate) + ' Days ')
+console.log("10,", datediff(sdate) + " Days ");
 
 /* EXTRA 11
  Write a function called "matrixGenerator" which receives two integers, x and y, as parameters.
@@ -179,6 +188,16 @@ console.log('10,',datediff(sdate) + ' Days ')
  ["00","01","02"
  "10","11","12"]
 */
+function matrixGenerator(x, y) {
+  let result = [];
+  for (let iy = 0; iy < y; iy++) {    
+    for (let ix = 0; ix < x; ix++) {
+        result.push(iy.toString() + ix.toString());
+    }   
+  }
+  return result;
+}
+console.log('11,',matrixGenerator(3, 2));
 
 /* WRITE YOUR ANSWER HERE */
 
