@@ -73,6 +73,11 @@ console.log(`6, ${check3and7(14)},${check3and7(8)}`)
 /* EXERCISE 7
  Write a function called "reverseString" which programmatically reverses a given string (es.: Strive => evirtS).
 */
+function reverseString(str) {
+return str.split('').reverse().join('');
+
+}
+console.log(`7, ${reverseString('Strive')}`)
 
 /* WRITE YOUR ANSWER HERE */
 
