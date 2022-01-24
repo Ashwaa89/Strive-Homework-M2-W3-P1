@@ -104,8 +104,16 @@ console.log('9,',cutString('strive school is great'));
 /* EXERCISE 10
  Write a function called "giveMeRandom" which accepts a number n and returns an array containing n random numbers between 0 and 10.
 */
+function giveMeRandom(n) {
+    const arr = [];
+    while (arr.length < n) {
+        arr.push(Math.floor(Math.random() * 10))
+    }
+    return arr;
+}
 
-/* WRITE YOUR ANSWER HERE */
+console.log('10,',giveMeRandom(20));
+
 
 /* WHEN YOU ARE FINISHED
  Commit and push the code to your personal GitHub repository; then post the link of your commit on the Homework section of today's Eduflow.
