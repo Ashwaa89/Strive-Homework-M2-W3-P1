@@ -19,14 +19,17 @@ let width = 11;
 let height = 12;
 console.log('1,',GetArea(width,height))
 
-/* WRITE YOUR ANSWER HERE */
+
 
 /* EXERCISE 2
  Write a function called "crazySum" which receives two integers as parameters.
  It should return the sum of those two values, but if the two values are the same then it should return their sum multiplied by 3.
 */
+function crazySum(Val1,Val2) {
+    return Val1 === Val2 ? (Val1 + Val2) * 5 : Val1 + Val2
+}
+console.log(`2, ${crazySum(1,1)},${crazySum(2,3)}`)
 
-/* WRITE YOUR ANSWER HERE */
 
 /* EXERCISE 3
  Write a function called "crazyDiff" that computes the absolute difference between a given number and 19.
