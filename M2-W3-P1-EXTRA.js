@@ -165,7 +165,12 @@ console.log('9,',isnotspam('This is a test email with spam'),isnotspam('Is ok fo
  Write a function that receives a date as a parameter and calculates the number of days passed since the given date.
 */
 
-/* WRITE YOUR ANSWER HERE */
+let sdate = new Date('11/09/2020')
+
+function datediff(date) {
+    return  Math.floor((new Date() -date) / (1000 * 60 * 60 * 24));
+}
+console.log('10,',datediff(sdate) + ' Days ')
 
 /* EXTRA 11
  Write a function called "matrixGenerator" which receives two integers, x and y, as parameters.
