@@ -4,8 +4,27 @@
  Write a function called "checkArray" which receives an array of random numbers (created with giveMeRandom) and prints, for each item, whether it's bigger than 5 or not.
  The function should return the sum of just the numbers bigger than 5.
 */
+let RndArr;
+function giveMeRandom(n) {
+  const arr = [];
+  while (arr.length < n) {
+    arr.push(Math.floor(Math.random() * 10));
+  }
+  return arr;
+}
+console.log('1, Sum = ',checkArray(giveMeRandom(20)));
+function checkArray(Arr) {
+  console.log(`1, Arr = ${Arr}`);
+  let result = 0;
+  for (n of Arr) {
+    console.log(`1, ${n} ${n > 5 ? `is bigger than 5` : `is smaller than 5`}`);
+    if (n > 5) {
+      result += n;
+    }
+  }
+  return result;
+}
 
-/* WRITE YOUR ANSWER HERE */
 
 /* EXTRA 2
  In your eCommerce you have an array of objects called shoppingCart. Each one of these objects has a price, a name, an id and the quantity to be shipped.
