@@ -155,7 +155,10 @@ console.log('8,',longest(['Strive','School','Is','Great','Like','Seriously']))
  Write a function to create a very simple anti spam filter for your mailbox. The function takes a string emailContent, and returns a boolean.
  The function should return true if the emailContent string does not contain the words SPAM or SCAM.
 */
-
+function isnotspam(emailContent) {
+    return !emailContent.toUpperCase().includes('SPAM') && !emailContent.toUpperCase().includes('SCAM')
+}
+console.log('9,',isnotspam('This is a test email with spam'),isnotspam('Is ok for email fiter'))
 
 
 /* EXTRA 10
